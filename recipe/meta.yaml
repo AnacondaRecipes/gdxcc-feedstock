@@ -18,12 +18,15 @@ requirements:
   host:
     - pip
     - python
+    - wheel
   run:
     - python
 
 test:
   imports:
     - gdxcc
+  commands:
+    - pip check
 
 about:
   home: "https://github.com/kavvkon/gams-api"
