@@ -21,6 +21,8 @@ requirements:
     - wheel
   run:
     - python
+    - wheel
+    - pip
 
 test:
   imports:
