@@ -1,0 +1,49 @@
+{% set name = "gdxcc" %}
+{% set version = "8.33.2.post1" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: a4a26f0a92e04a9e90e6e8159468676a7f6bb1036b64869240659d8dd5b49053
+
+build:
+  number: 0
+  skip: true # [linux-aarch64]
+  script: "{{ PYTHON }} -m pip install --no-deps --no-build-isolation . -vv"
+
+requirements:
+  build:
+    - {{ compiler('c') }} 
+  host:
+    - pip
+    - python
+    - wheel
+  run:
+    - python
+
+test:
+  requires:
+    - pip
+  imports:
+    - gdxcc
+  commands:
+    - pip check
+
+about:
+  home: "https://github.com/kavvkon/gams-api"
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: "Python library to access and modify gdx files"
+  doc_url: https://github.com/kavvkon/gams-api 
+  dev_url: https://github.com/kavvkon/gams-api
+
+extra:
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/46266
+    reason: Client request
+  recipe-maintainers:
+    - ianaobi
