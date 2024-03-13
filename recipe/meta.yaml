@@ -16,7 +16,7 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }} # [linux-64]
+    - {{ compiler('c') }} 
   host:
     - pip
     - python
