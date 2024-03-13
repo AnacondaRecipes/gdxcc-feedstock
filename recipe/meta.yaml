@@ -37,7 +37,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  description: "Python library to access and modify gdx files"
+  summary: "Python library to access and modify gdx files"
   doc_url: https://github.com/kavvkon/gams-api 
   dev_url: https://github.com/kavvkon/gams-api
 
