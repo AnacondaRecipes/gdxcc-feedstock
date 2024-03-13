@@ -11,6 +11,7 @@ source:
 
 build:
   number: 0
+  skip: true # [linux-aarch64]
   script: "{{ PYTHON }} -m pip install --no-deps --no-build-isolation . -vv"
 
 requirements:
@@ -36,7 +37,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "Python library to access and modify gdx files"
+  description: "Python library to access and modify gdx files"
   doc_url: https://github.com/kavvkon/gams-api 
   dev_url: https://github.com/kavvkon/gams-api
 
