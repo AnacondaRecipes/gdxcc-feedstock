@@ -35,7 +35,7 @@ about:
   home: "https://github.com/kavvkon/gams-api"
   license: MIT
   license_family: MIT
-  license_file: 
+  license_file: LICENSE
   summary: "Python library to access and modify gdx files"
   doc_url: 
   dev_url: 
